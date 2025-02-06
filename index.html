@@ -17,10 +17,39 @@ p {
 font-size: 24px;
 text-align: center;
 }
+button {
+background-color: #ff0000;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+button:hover {
+background-color: #cc0000;
+}
 </style>
 </head>
 <body>
-<h1>Hello!</h1>
-<p>Сайт ОЛИМПуса.</p>
+<h1>Привет!</h1>
+<p>Олимпусиосис</p>
+<button onclick="showNextPage()">Дальше</button>
+<script>
+function showNextPage() {
+document.getElementById("nextPage").style.display = "block";
+document.getElementById("button").style.display = "none";
+}
+</script>
+<div id="nextPage" style="display: none;">
+<h1>эуэуэу</h1>
+<p>тестыыы</p>
+<button onclick="showHomePage()">Назад</button>
+<script>
+function showHomePage() {
+document.getElementById("nextPage").style.display = "none";
+document.getElementById("button").style.display = "block";
+}
+</script>
+</div>
 </body>
 </html>
